@@ -11,7 +11,7 @@ Castle Wolfenstein.
  
  Game's plot.
  the game story is about a witcher who search his way home is an hustle area.
- the witcher shold fight with shoulders and ships who search to kill him.
+ the witcher shold fight with soldiers and ships who search to kill him.
  
  Original game here:
  https://www.myabandonware.com/game/castle-wolfenstein-3l
