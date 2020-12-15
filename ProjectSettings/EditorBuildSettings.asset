@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/3-enemies/c-patrol.unity
     guid: cbdbd2056f2a7574295152774e1734f1
+  - enabled: 1
+    path: Assets/Scenes/SceneRe.unity
+    guid: 8ebbb3c1fdf806945b8f88e20a3b0f7f
+  - enabled: 1
+    path: Assets/Scenes/finished.unity
+    guid: 74f00dcaadb23764ab776999d11aa5b7
   m_configObjects: {}
