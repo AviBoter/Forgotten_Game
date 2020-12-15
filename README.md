@@ -10,7 +10,7 @@ Castle Wolfenstein.
  and so we did (:
  
  Game's plot.
- the game story is about a witcher who search his way home is an hustle area.
+ the game story is about a witcher who search his way home in hustle area.
  the witcher shold fight with soldiers and ships who search to harm him and stop him from getting there.
  
  Original game here:
