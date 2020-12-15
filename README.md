@@ -22,7 +22,7 @@ Castle Wolfenstein.
 
  Movement - using the Arrows
 
- FireBall  - using the keys w,a,s,d for shot to require direction
+ FireBall  - using the keys w,a,s,d for shoting in require direction
 
  Walk into hot ballon,hills by mine them, or getting into home - using Space ## ( Note please press Space then walk through them).
  
