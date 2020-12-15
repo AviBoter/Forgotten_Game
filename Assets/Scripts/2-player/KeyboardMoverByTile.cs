@@ -23,7 +23,7 @@ public class KeyboardMoverByTile: KeyboardMover {
         if (allowedTiles.Contain(tileOnNewPosition)) {
             transform.position = newPosition;
         } 
-        else if(!allowedTiles.Contain(tileOnNewPosition) && tileOnNewPosition.Equals(oldTile) && Input.GetKey(KeyCode.A))
+        else if(!allowedTiles.Contain(tileOnNewPosition) && tileOnNewPosition.Equals(oldTile) && Input.GetKey(KeyCode.Space))
         {
             tilemap.SetTile(tilemap.WorldToCell(newPosition), newTile);
         } 

@@ -15,6 +15,13 @@ public class ClosestEnemy : MonoBehaviour
     [Tooltip("attack radius")]
     [SerializeField] private float radius = 3f;
 
+    [Tooltip("attack key")]
+    [SerializeField] private KeyCode Attackey;
+
+    private bool Attackpressed = false;
+
+
+
 
     void Start()
     {
@@ -22,7 +29,14 @@ public class ClosestEnemy : MonoBehaviour
         StartCoroutine(waiter());
     }
 
-   
+    void Update()
+    {
+        if (Input.GetKey(Attackey)) {
+            Attackpressed = true;
+        }
+    }
+
+
     IEnumerator waiter()
     {
         for (; ; )
@@ -44,13 +58,12 @@ public class ClosestEnemy : MonoBehaviour
 
 
             }
-            if (nearestEnemy!=null && Vector2.Distance(transform.position, nearestEnemy.position) <= radius)
+            if (nearestEnemy!=null && Vector2.Distance(transform.position, nearestEnemy.position) <= radius 
+                                   && Attackpressed)
             {
-                if (Input.GetKey(KeyCode.D))
-                {
                     Destroy(nearestEnemy.gameObject);
                     EnemyList.Remove(nearestEnemy);
-                }
+                    Attackpressed = false;
             }
 
 
