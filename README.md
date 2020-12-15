@@ -1,20 +1,23 @@
-# Unity week 5: Two-dimensional scene-building and path-finding
+#Forgotten_Game
 
-A project with step-by-step scenes illustrating how to construct a 2D scene using tilemaps,
-and how to do path-finding using the BFS algorithm.
-
-
-## Credits
-
-Graphics:
-* [Ultima 4 Graphics](https://github.com/jahshuwaa/u4graphics) by Joshua Steele.
-
-Online course:
-* [Unity 2D](https://www.udemy.com/course/unitycourse/learn/lecture/10246496), a Udemy course by Gamedev.tv.
-* [Unity RPG](https://www.gamedev.tv/p/unity-rpg/?product_id=1503859&coupon_code=JOINUS).
-
-Procedural generation:
-* [Habrador - Unity Programming Patterns](https://github.com/Habrador/Unity-Programming-Patterns#7-double-buffer)
-
-Programming:
-* Erel Segal-Halevi
+Castle Wolfenstein.
+ 
+ As a part of our class assignment we decided to tribute game that inspired id Software's blockbuster Wolfenstein 3D - 
+ game which many people termed as the "grandfather of 3D shooters" and widely considered to be one of the greatest video games ever made.
+ One of a few games that change Gaming History!
+ 
+ We required to transfrom an old abndoned game (Castle Wolfenstein) to a 2D tiles game.
+ and so we did (:
+ 
+ Game's plot.
+ the game story is about a witcher who search his way home is an hustle area.
+ the witcher shold fight with shoulders and ships who search to kill him.
+ 
+ Original game here:
+ https://www.myabandonware.com/game/castle-wolfenstein-3l
+ 
+ you can play game here:
+ 
+ 
+ 
+ 
