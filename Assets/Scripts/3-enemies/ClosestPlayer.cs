@@ -1,20 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
-
-public class ClosestEnemy : MonoBehaviour
+public class ClosestPlayer : MonoBehaviour
 {
     private Transform Player;
 
     public List<Transform> EnemyList;
 
-    public Transform nearestEnemy ;
+    public Transform nearestEnemy;
 
     [Tooltip("attack radius")]
-    [SerializeField] private float radius = 3f;
-
+    [SerializeField] private float radius = 2f;
+   // private bool active = false;
 
     void Start()
     {
@@ -22,11 +20,12 @@ public class ClosestEnemy : MonoBehaviour
         StartCoroutine(waiter());
     }
 
-   
+
     IEnumerator waiter()
     {
         for (; ; )
         {
+          
             float minimumDistance = Mathf.Infinity;
 
             nearestEnemy = null;
@@ -44,20 +43,18 @@ public class ClosestEnemy : MonoBehaviour
 
 
             }
-            if (nearestEnemy!=null && Vector2.Distance(transform.position, nearestEnemy.position) <= radius)
+            if (nearestEnemy != null && Vector2.Distance(transform.position, nearestEnemy.position) <= radius)
             {
-                if (Input.GetKey(KeyCode.D))
-                {
-                    Destroy(nearestEnemy.gameObject);
-                    EnemyList.Remove(nearestEnemy);
-                }
+
+                Destroy(nearestEnemy.gameObject);
+                EnemyList.Remove(nearestEnemy);
+           
             }
 
 
-            //Wait for 2 seconds
-             yield return new WaitForSeconds(1);
-
+   
+                yield return new WaitForSeconds(1);
+             
         }
     }
 }
-

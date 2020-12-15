@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 218984457}
   - component: {fileID: 218984456}
   - component: {fileID: 218984455}
-  - component: {fileID: 218984454}
   - component: {fileID: 218984452}
+  - component: {fileID: 218984453}
+  - component: {fileID: 218984454}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -221,6 +222,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gizmoRadius: 0.2
+--- !u!114 &218984453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218984449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd1a0b9add43dd4badb33862acae8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radiusToWatch: 5
 --- !u!114 &218984454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,14 +242,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218984449}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee853ba9ff93a4d448b83af8995875a7, type: 3}
+  m_Script: {fileID: 11500000, guid: b505014b7bf1e814e868d26dcc441bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radiusToWatch: 2
-  probabilityToRotate: 0.2
-  probabilityToStopRotating: 0.2
+  EnemyList: []
+  nearestEnemy: {fileID: 1577973164}
+  radius: 2
 --- !u!114 &218984455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +273,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218984449}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 837db0ae8b547424e82b3efba184a948, type: 3}
   m_Name: 
@@ -270,7 +284,8 @@ MonoBehaviour:
   maxIterations: 1000
   targetInWorld: {x: 0, y: 0, z: 0}
   targetInGrid: {x: 0, y: 0, z: 0}
-  patrolPath: {fileID: 218984452}
+  patrolPath: {fileID: 3531413936488926618, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+    type: 3}
   pointCount: 0
   currentPointIndex: 0
 --- !u!114 &218984457
@@ -280,7 +295,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218984449}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1efdb247e0cca949a2578a18318da0d, type: 3}
   m_Name: 
@@ -302,6 +317,8 @@ GameObject:
   m_Component:
   - component: {fileID: 365939399}
   - component: {fileID: 365939398}
+  - component: {fileID: 365939400}
+  - component: {fileID: 365939401}
   m_Layer: 0
   m_Name: Enemy1 (1)
   m_TagString: Untagged
@@ -368,12 +385,50 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365939397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.61, y: -9.43, z: 0}
+  m_LocalPosition: {x: 8.6, y: -8.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &365939400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365939397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837db0ae8b547424e82b3efba184a948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 931517250}
+  allowedTiles: {fileID: 1577973168}
+  speed: 2
+  maxIterations: 1000
+  targetInWorld: {x: 0, y: 0, z: 0}
+  targetInGrid: {x: 0, y: 0, z: 0}
+  patrolPath: {fileID: 3531413936488926618, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+    type: 3}
+  pointCount: 0
+  currentPointIndex: 0
+--- !u!114 &365939401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365939397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b505014b7bf1e814e868d26dcc441bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyList:
+  - {fileID: 0}
+  nearestEnemy: {fileID: 1577973164}
+  radius: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9579,6 +9634,105 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &951423135
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3531413935547050391, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413935663436604, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413935663436604, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926616, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_Name
+      value: PatrolPath1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926618, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: gizmoRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936488926619, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936982349399, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3531413936982349399, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d6f2e4cfb4cf35488dfd69afd88bcb8, type: 3}
 --- !u!1 &1577973162
 GameObject:
   m_ObjectHideFlags: 0
@@ -9592,7 +9746,6 @@ GameObject:
   - component: {fileID: 1577973167}
   - component: {fileID: 1577973165}
   - component: {fileID: 1577973168}
-  - component: {fileID: 1577973166}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -9681,21 +9834,8 @@ MonoBehaviour:
   EnemyList:
   - {fileID: 218984451}
   - {fileID: 365939399}
-  - {fileID: 0}
   nearestEnemy: {fileID: 218984451}
   radius: 2
---- !u!114 &1577973166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577973162}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aa04e50e8312654296429ededacce9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1577973167
 MonoBehaviour:
   m_ObjectHideFlags: 0

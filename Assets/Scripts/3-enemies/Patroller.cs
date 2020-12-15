@@ -5,7 +5,6 @@
  */
 public class Patroller: TargetMover {
     [SerializeField] Cycle patrolPath = null;
-
     [SerializeField] private int pointCount;
     [SerializeField] private int currentPointIndex;
 
@@ -14,7 +13,8 @@ public class Patroller: TargetMover {
         pointCount = patrolPath.transform.childCount;
         currentPointIndex = 0;
     }
-
+    
+    
     private void Update() {
         if (atTarget) {
             currentPointIndex = (currentPointIndex + 1) % pointCount;
