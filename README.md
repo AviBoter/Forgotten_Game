@@ -11,12 +11,12 @@ Castle Wolfenstein.
  Original game here:
  https://www.myabandonware.com/game/castle-wolfenstein-3l
  
- itch.io upload our the game here: https://lba-universe.itch.io/forgotten-game
+ itch.io upload םכ our the game here: https://lba-universe.itch.io/forgotten-game
  
  Our Game's plot:
  
  You playing a witcher who search his way home in hustle area, in those days witchers were hunted.
- so you must fight back to survive till he get home don't let them catch you, and try dodge the ships bullets.
+ so you must fight back to survive till you get home don't let them catch you, and try dodge the ships bullets.
 
  Keys:
 
