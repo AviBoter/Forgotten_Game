@@ -11,7 +11,7 @@ Castle Wolfenstein.
  Original game here:
  https://www.myabandonware.com/game/castle-wolfenstein-3l
  
- itch.io upload םכ our the game here: https://lba-universe.itch.io/forgotten-game
+ itch.io upload of our the game here: https://lba-universe.itch.io/forgotten-game
  
  Our Game's plot:
  
