@@ -18,6 +18,4 @@ Castle Wolfenstein.
  
  TileMap game here:
  
- 
- 
- 
+ Enjoy!
