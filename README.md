@@ -1,4 +1,4 @@
-#Forgotten_Game
+# Forgotten_Game
 
 Castle Wolfenstein.
  
@@ -7,15 +7,33 @@ Castle Wolfenstein.
  One of a few games that change Gaming History!
  
  We required to transfrom an old abndoned game (Castle Wolfenstein) to a 2D tiles game.
- and so we did (:
- 
- Game's plot.
- the game story is about a witcher who search his way home in hustle area.
- the witcher shold fight with soldiers and ships who search to harm him and stop him from getting there.
- 
+
  Original game here:
  https://www.myabandonware.com/game/castle-wolfenstein-3l
  
- TileMap game here:
+ itch.io upload of the game here: https://lba-universe.itch.io/forgotten-game
+ 
+ Our Game's plot:
+ 
+ You playing a witcher who search his way home in hustle area, in those days witchers were hunted.
+ so you must fight back to survive till he get home don't let them catch you, and try dodge the ships bullets.
+
+ Keys:
+
+ Movement - using the Arrows
+
+ FireBall  - using the keys w,a,s,d for shot to require direction
+
+ Walk into hot ballon,hills by mine them, or getting into home - using Space ## ( Note please press Space then walk through them).
  
  Enjoy!
+
+ ###
+ 
+ ## pics:
+ 
+ ![](https://github.com/Lba-universe/Forgotten_Game/blob/master/pics/pic2.png)
+
+ ![](https://github.com/Lba-universe/Forgotten_Game/blob/master/pics/game1.png)
+ 
+ 
