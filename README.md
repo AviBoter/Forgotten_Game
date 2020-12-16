@@ -49,8 +49,9 @@ Castle Wolfenstein.
  FireBallMover.cs - attached to object that spawn by "AttackSpawner script" - used to set the direction of the fireball
  [link here:](https://github.com/Lba-universe/Forgotten_Game/blob/master/Assets/Scripts/2-player/FireBallMover.cs)
  
-
-
+ TeleportOnTrigger.cs - teleport a given object with tag to a given other object location
+ [link here:](https://github.com/Lba-universe/Forgotten_Game/blob/master/Assets/Scripts/1-tiles/TeleportOnTrigger.cs)
+ 
  ###
  
  ## pics:
