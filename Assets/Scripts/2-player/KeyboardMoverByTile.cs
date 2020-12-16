@@ -7,6 +7,7 @@ using static System.Collections.Generic.Dictionary<UnityEngine.Vector3, UnityEng
 /**
  * This component allows the player to move by clicking the arrow keys,
  * but only if the new position is on an allowed tile.
+ * and allow him to go throw not allowed tile by clicking space while walking thourght them
  */
 public class KeyboardMoverByTile : KeyboardMover
 {
@@ -15,15 +16,7 @@ public class KeyboardMoverByTile : KeyboardMover
     [SerializeField] TileBase newTile = null;
     [SerializeField] TileBase oldTile = null;
     [SerializeField] TileBase PlayerHome = null;
-    [SerializeField] TileBase HotAirBalloon = null;
-    private Dictionary<Vector3, Vector3> HotAirBalloons;
-    private float eps = 1f;
 
-    private void Start()
-    {
-        HotAirBalloons = new Dictionary<Vector3, Vector3>();
-        HotAirBalloons.Add(new Vector3(2.5f, -9.15f, 0f), new Vector3(11.59f, 7.56f, 0f));
-    }
     private TileBase TileOnPosition(Vector3 worldPosition)
     {
         Vector3Int cellPosition = tilemap.WorldToCell(worldPosition);
@@ -48,18 +41,6 @@ public class KeyboardMoverByTile : KeyboardMover
             Debug.Log("Home Sweet Home " + tileOnNewPosition + "!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
-        }
-        else if (tileOnNewPosition.Equals(HotAirBalloon))
-        {
-            KeyCollection col = HotAirBalloons.Keys;
-            foreach (Vector3 v in col)
-            {
-                if (v.sqrMagnitude - newPosition.sqrMagnitude <= eps && Input.GetKey(KeyCode.Space))
-                {
-                    Debug.Log("Fly away " + tileOnNewPosition + "!");
-                    transform.position = HotAirBalloons[v];
-                }
-            }
         }
         else
         {
