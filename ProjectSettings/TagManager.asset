@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FireBall
   - ShipBullet
+  - HotAirBallon
   layers:
   - Default
   - TransparentFX

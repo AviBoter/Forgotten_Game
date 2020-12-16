@@ -9,16 +9,17 @@ using UnityEngine.SceneManagement;
 public class DestoryOnTrigger2D : MonoBehaviour
 {
     [Tooltip("Every object tagged with this tag will trigger the destruction of this object")]
-    [SerializeField] string triggeringTag;
+    [SerializeField] string TagDestory;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("destiry on 2d");
 
-        if (this.tag == "Player" && other.tag != "FireBall") {
+        if (this.tag == "Player" && other.tag != "HotAirBallon" && other.tag != "FireBall") {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        else if (other.tag == triggeringTag && enabled)
+        else if (other.tag == TagDestory && enabled)
         {
             Destroy(this.gameObject);
             Destroy(other.gameObject);
