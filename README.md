@@ -27,6 +27,17 @@ Castle Wolfenstein.
  Walk into hot ballon,hills by mining them, or getting into home - using Space ## ( Note please press Space then walk through them).
  
  Enjoy!
+ 
+ Scripts Changed:
+ KeyboardMoverByTile - adding player the ability the mine through tiles and transform himself with game's veriuos types of shortcuts ways.
+ In case of mining, a mountain tile was mined becomes a grass (can be changed easily by designer).
+ In case of transport, player position change from pos A to pos B. (Trasform.position).
+ 
+ See here:
+ https://github.com/Lba-universe/Forgotten_Game/blob/master/Assets/Scripts/2-player/KeyboardMoverByTile.cs
+ 
+ in addition, MiniMap added for better game expirence.
+ 
 
  ###
  
